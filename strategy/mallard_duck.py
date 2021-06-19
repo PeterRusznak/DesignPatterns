@@ -1,7 +1,8 @@
+from flyable import Flyable
 from duck import Duck
 
 
-class MallardDuck(Duck):
+class MallardDuck(Duck, Flyable):
 
     def __repr__(self) -> str:
         return "MALLARD"

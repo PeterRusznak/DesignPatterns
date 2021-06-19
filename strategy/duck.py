@@ -5,10 +5,7 @@ class Duck(ABC):
     
     @abstractmethod
     def display(self)-> str:
-        pass
-
-    def fly(self):
-        print(f"{self.display()} és REPÜL")
+        pass    
 
     def quack(self):
         print("QUACK")

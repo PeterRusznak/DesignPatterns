@@ -1,3 +1,4 @@
+from flyable import Flyable
 from gumi_duck import GumiDuck
 from redhead_duck import RedHead
 from mallard_duck import MallardDuck
@@ -8,7 +9,11 @@ g = GumiDuck()
 
 kacsak = [m, r, g]
 for k in kacsak:
-    k.fly()
+    if isinstance(k, Flyable):
+        k.fly()
+    else:
+        print(k.display())
+        
 
 
 

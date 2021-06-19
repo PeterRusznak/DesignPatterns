@@ -1,7 +1,8 @@
+from flyable import Flyable
 from duck import Duck
 
 
-class RedHead(Duck):
+class RedHead(Duck, Flyable):
 
 
     def __repr__(self) -> str:
