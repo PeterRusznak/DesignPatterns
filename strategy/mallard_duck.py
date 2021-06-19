@@ -1,8 +1,12 @@
-from flyable import Flyable
+from fly.flywithwings import FlyWithWings
 from duck import Duck
 
 
-class MallardDuck(Duck, Flyable):
+class MallardDuck(Duck):
+
+    def __init__(self):
+        super().__init__()
+        self._flybehaviour = FlyWithWings() 
 
     def __repr__(self) -> str:
         return "MALLARD"
