@@ -1,17 +1,13 @@
-from gumi_duck import GumiDuck
+
+from gumi_duck import GumiKacsa
 from mallard_duck import MallardDuck
 
 m = MallardDuck()
-g = GumiDuck()
+g = GumiKacsa()
 
-kacsak = [m, g]
+kacsak = [m,g]
+
 for k in kacsak:
-    print(k.display())    
-    k.performFly()
-
-    
-        
-
-
-
-
+    k.display()
+    k.swim()
+    k.perform_fly()

@@ -1,18 +1,14 @@
-from fly.flywithwings import FlyWithWings
-from duck import Duck
+from fly.fly_with_wings import FlyWithWings
+from duck import AbstractDuck
 
 
-class MallardDuck(Duck):
+class MallardDuck(AbstractDuck):
 
     def __init__(self):
-        super().__init__()
-        self._flybehaviour = FlyWithWings() 
+        self._flying_strategy = FlyWithWings()
 
     def __repr__(self) -> str:
-        return "MALLARD"
+        return "MALLARD KACSA"
 
-    def display(self) -> str:
-        return f"EZ EGY {self} KACSA"
-        
-
-
+    def display(self):
+        return print(self)

@@ -1,22 +1,17 @@
 from __future__ import annotations
 from abc import ABC, abstractmethod
 
-class Duck(ABC):
+class AbstractDuck(ABC):
 
     def __init__(self):
-        self._flybehaviour = ''
-    
-    def performFly(self):
-        self._flybehaviour.fly()
-
+        self._flying_strategy = None
 
     @abstractmethod
-    def display(self)-> str:
-        pass    
-
-    def quack(self):
-        print("QUACK")
+    def display(self):
+        pass
 
     def swim(self):
-        print("SWIM")
-    
+        print("ÚSZOK")
+
+    def perform_fly(self):
+        self._flying_strategy.fly()    
