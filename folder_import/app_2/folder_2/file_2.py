@@ -3,7 +3,9 @@ from posixpath import dirname
 import sys
 from os.path import abspath, join
 
-sys.path.append(join("app_1", "folder_1"))
+sys.path.append(abspath(join("app_1", "folder_1")))
+print(sys.path)
+
 
 from file_1 import First
 
