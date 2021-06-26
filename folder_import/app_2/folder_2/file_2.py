@@ -1,11 +1,13 @@
+from os import pardir
+from posixpath import dirname
 import sys
-from os.path import abspath
+from os.path import abspath, join
 
-elso_dir = abspath( "app_1"+ '/folder_1/')
+x = join("app_1", "folder_1")
+elso_dir = abspath(x)
 sys.path.append(elso_dir)
 
 from file_1 import First
-
 
 f = First()
 f.first()
